@@ -1,0 +1,28 @@
+.dashboard {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dashboard-logo {
+    animation: dashboard-logo-spin infinite 20s linear;
+  }
+}
+
+.dashboard-header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.dashboard a {
+  color: #61bbfb;
+}
+
+.dashboard-header img {
+  height: 50vh;
+  margin-bottom: 10vh;
+}
