@@ -7,6 +7,7 @@ import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import {BrowserRouter} from "react-router-dom";
 import {App} from "app";
+import {NavBar} from 'common/components'
 
 /*Set Axios Clients*/
 setupClients(store);
@@ -20,6 +21,7 @@ root.render(
         <Provider store={store}>
             <PersistGate persistor={persistor}>
                 <BrowserRouter>
+                    <NavBar/>
                     <App/>
                 </BrowserRouter>
             </PersistGate>

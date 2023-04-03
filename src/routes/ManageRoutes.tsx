@@ -1,11 +1,11 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
-import {DashboardPage} from "features/dashboard";
+import {HeroPage} from "features/hero";
 
 export const ManageRoutes = () => {
     return (
         <Routes>
-            <Route index element={<DashboardPage/>}/>
+            <Route index element={<HeroPage/>}/>
         </Routes>
     );
 }
