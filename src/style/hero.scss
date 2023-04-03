@@ -1,0 +1,22 @@
+.hero {
+  text-align: center;
+}
+
+.hero-header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.hero a {
+  color: #61bbfb;
+}
+
+.hero-header img {
+  height: 50vh;
+  margin-bottom: 10vh;
+}
