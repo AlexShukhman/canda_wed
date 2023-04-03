@@ -89,12 +89,27 @@ html, body {
   transform: rotate(-405deg);
 }
 
-.menu li a {
-  color: inherit;
-  transition: color 0.5s;
-  text-decoration: inherit;
+.menu li {
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
+.menu li button {
+  display: block;
+}
+
+.menu li button,
+.menu li a {
+  color: inherit;
+  background: inherit;
+  border: none;
+  transition: color 0.5s;
+  text-decoration: inherit;
+  width: 100%;
+}
+
+.menu li button:hover,
 .menu li a:hover {
   color: rgb(33, 101, 169);
   text-decoration: inherit;
