@@ -6,8 +6,8 @@ export function NavBar () {
       <div className='menu-button'></div>
       </label>
       <ul className="menu">
-        <li>Home</li>
-        <li>Where</li>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/where'>Where</a></li>
         <li>When</li>
         <li>Details</li>
         <li>Registry</li>

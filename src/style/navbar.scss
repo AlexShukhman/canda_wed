@@ -89,6 +89,17 @@ html, body {
   transform: rotate(-405deg);
 }
 
+.menu li a {
+  color: inherit;
+  transition: color 0.5s;
+  text-decoration: inherit;
+}
+
+.menu li a:hover {
+  color: rgb(33, 101, 169);
+  text-decoration: inherit;
+}
+
 @media (max-width: 700px) {
   .menu-button-container {
     display: flex;
