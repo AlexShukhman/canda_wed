@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://alexshukhman.com/canda_wed/",
+  "homepage": "https://candawedding.us/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
