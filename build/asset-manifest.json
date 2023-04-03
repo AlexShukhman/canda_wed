@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/canda_wed/static/css/main.9031e9ae.css",
-    "main.js": "/canda_wed/static/js/main.9b653859.js",
-    "static/media/img1.png": "/canda_wed/static/media/img1.1b9483922354de1f2076.png",
-    "service-worker.js": "/canda_wed/service-worker.js",
-    "index.html": "/canda_wed/index.html",
-    "main.9031e9ae.css.map": "/canda_wed/static/css/main.9031e9ae.css.map",
-    "main.9b653859.js.map": "/canda_wed/static/js/main.9b653859.js.map"
+    "main.css": "/static/css/main.9031e9ae.css",
+    "main.js": "/static/js/main.0cce9279.js",
+    "static/media/img1.png": "/static/media/img1.1b9483922354de1f2076.png",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.9031e9ae.css.map": "/static/css/main.9031e9ae.css.map",
+    "main.0cce9279.js.map": "/static/js/main.0cce9279.js.map"
   },
   "entrypoints": [
     "static/css/main.9031e9ae.css",
-    "static/js/main.9b653859.js"
+    "static/js/main.0cce9279.js"
   ]
 }
