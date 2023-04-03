@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 export function NavBar () {
   return (
     <section className="top-nav">
@@ -6,8 +8,8 @@ export function NavBar () {
       <div className='menu-button'></div>
       </label>
       <ul className="menu">
-        <li><a href='/'>Home</a></li>
-        <li><a href='/where'>Where</a></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/where'>Where</Link></li>
         <li>When</li>
         <li>Details</li>
         <li>Registry</li>
