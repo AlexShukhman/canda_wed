@@ -7,7 +7,10 @@ import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import {HashRouter} from "react-router-dom";
 import {App} from "app";
-import {NavBar} from 'common/components'
+import {
+  ConstructionBanner,
+  NavBar,
+} from 'common/components'
 
 /*Set Axios Clients*/
 setupClients(store);
@@ -22,6 +25,7 @@ root.render(
             <PersistGate persistor={persistor}>
                 <HashRouter>
                     <NavBar/>
+                    <ConstructionBanner/>
                     <App/>
                 </HashRouter>
             </PersistGate>
