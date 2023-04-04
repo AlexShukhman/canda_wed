@@ -1,0 +1,34 @@
+.constructionBanner {
+  color: white;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  size: 5vmin;
+  font-family: 'Playfair Display';
+  transform: translateX(30%) translateY(0%) rotate(45deg);
+  transform-origin: top left;
+}
+
+.bannerHolder {
+  position: static;
+}
+
+.constructionBanner:before,
+.constructionBanner:after {
+  content: '';
+  position: absolute;
+  top:0;
+  margin: 0 -1px; /* tweak */
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.constructionBanner:before {
+  right:100%;
+}
+
+.constructionBanner:after {
+  left:100%;
+}
