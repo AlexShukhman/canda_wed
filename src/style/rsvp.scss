@@ -21,6 +21,7 @@
 
 .rsvpPage button {
   background-color: white;
+  color: black;
   margin-top: 1em;
   border-radius: 25px;
   border-style: solid;
@@ -92,7 +93,7 @@
 }
 
 .rsvpForm input[type=checkbox] {
-  transform: scale(2);
+  transform: scale(1.5);
 }
 
 .rsvpForm input[type=text] {
