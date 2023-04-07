@@ -8,7 +8,6 @@ import {PersistGate} from "redux-persist/integration/react";
 import {HashRouter} from "react-router-dom";
 import {App} from "app";
 import {
-  ConstructionBanner,
   NavBar,
 } from 'common/components'
 
@@ -25,7 +24,6 @@ root.render(
             <PersistGate persistor={persistor}>
                 <HashRouter>
                     <NavBar/>
-                    <ConstructionBanner/>
                     <App/>
                 </HashRouter>
             </PersistGate>

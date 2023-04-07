@@ -3,6 +3,7 @@ import {Route, Routes} from 'react-router-dom';
 import {
   HeroPage,
   WherePage,
+  RSVPPage,
 } from "features";
 
 export const ManageRoutes = () => {
@@ -10,6 +11,7 @@ export const ManageRoutes = () => {
         <Routes>
             <Route index element={<HeroPage/>}/>
             <Route path='/where' element={<WherePage/>}/>
+            <Route path='/rsvp' element={<RSVPPage/>}/>
         </Routes>
     );
 }

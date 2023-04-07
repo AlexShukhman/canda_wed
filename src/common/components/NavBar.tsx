@@ -20,6 +20,7 @@ export function NavBar () {
         <li><Link to='/where'><LinkButton >Where</LinkButton></Link></li>
         <li>When</li>
         <li>Details</li>
+        <li><Link to='/rsvp'><LinkButton >RSVP</LinkButton></Link></li>
         <li>Registry</li>
       </ul>
     </section>
