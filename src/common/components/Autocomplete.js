@@ -6,6 +6,7 @@ class Autocomplete extends Component {
     super(props);
     const {
       id = "",
+      defaultContent = "",
       updateListener = null,
     } = this.props
     this.state = {
@@ -14,6 +15,7 @@ class Autocomplete extends Component {
       showSuggestions: false,
       userInput: "",
       id,
+      defaultContent,
       updateListener,
     };
   }
@@ -80,6 +82,7 @@ class Autocomplete extends Component {
         showSuggestions,
         userInput,
         id,
+        defaultContent,
       }
     } = this;
 
@@ -119,6 +122,7 @@ class Autocomplete extends Component {
           onChange={onChange}
           onKeyDown={onKeyDown}
           value={userInput}
+          placeholder={defaultContent}
         />
         {suggestionsListComponent}
       </Fragment>

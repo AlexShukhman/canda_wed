@@ -218,7 +218,7 @@ export function RSVPPage () {
       <div className='rsvpPage'>
         <img src={img2} alt="scroll down please!"/>
         <h1>RSVP</h1>
-        <Autocomplete updateListener={hideRSVPContent} id="rsvpName" suggestions={invitedPeople.map(person => person.name)}/>
+        <Autocomplete updateListener={hideRSVPContent} defaultContent="Your Name" id="rsvpName" suggestions={invitedPeople.map(person => person.name)}/>
         <button onClick={showRSVPContent}>Update RSVP</button>
         <div className={toShowRSVPContent ? 'rsvpContent' : 'hidden'}>
           <div className={toShowWarning ? 'warning' : 'hidden'}>{warning}</div>
