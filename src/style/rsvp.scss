@@ -1,0 +1,117 @@
+.rsvpPage {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  text-align: center;
+}
+
+.rsvpPage img {
+  height: 50vmin;
+  padding-left: 1em;
+}
+
+#rsvpName {
+  width: 80vw;
+}
+
+.rsvpPage button {
+  background-color: white;
+  margin-top: 1em;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #aaaaaa;
+  padding:0.25em
+}
+
+.rsvpPage button:active {
+  background-color: #eee;
+  border-color: #555;
+}
+
+.rsvpPage .hidden {
+  display: none;
+}
+
+.rsvpContent {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 80vw;
+}
+
+.rsvpContent p {
+  font-size: 90%
+}
+
+.rsvpForm {
+  width: 80vw;
+  padding-top: 1em;
+  table-layout: fixed;
+  margin: auto;
+}
+
+.rsvpForm tr:nth-child(3n+1) {
+  border-top-width: 2px;
+}
+
+.rsvpForm tr:nth-child(3n+3) {
+  height: 0.5em;
+}
+
+.rsvpForm tr:first-child {
+  border-top-width: 0;
+}
+
+.rsvpForm div {
+  display: table-cell;
+}
+
+.rsvpForm p {
+  font-size: 75%;
+  margin-top: 0.75em;
+  margin-bottom: 0;
+}
+
+.rsvpForm label {
+  font-size: 60%;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rsvpForm input {
+  width: auto;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.rsvpForm input[type=checkbox] {
+  transform: scale(2);
+}
+
+.rsvpForm input[type=text] {
+  font-size: 60%;
+  text-align: left;
+  border-width: 2px;
+  padding: 4px;
+}
+
+.rsvpForm .left {
+  text-align: right;
+  padding-right: 1vw;
+}
+
+.rsvpForm .right {
+  padding-left: 1vw;
+  text-align: left;
+}
+
+.rsvpForm i {
+  font-size: 60%;
+  color: #555
+}
+
