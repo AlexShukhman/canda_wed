@@ -228,7 +228,7 @@ export function RSVPPage () {
                   ...workingUser,
                   plusOneName: e.target.value,
                 })
-              }} /></td></tr> : null}
+              }} placeholder="Chris Hemsworth"/></td></tr> : null}
               {workingUser.plusOneAdded ? <tr> </tr> : null}
 
               {/* Dietary Restrictions */}
@@ -240,7 +240,7 @@ export function RSVPPage () {
                   ...workingUser,
                   dietaryRestrictions: e.target.value,
                 })
-              }} /></td></tr><tr></tr>
+              }} placeholder={`${(workingUser.partnerName || workingUser.plusOneName || 'Chris').split(' ')[0]} is vegan and I only drink clear soup.`} /></td></tr><tr></tr>
               
               {/* Song Request */}
               {/* <tr>

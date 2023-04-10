@@ -13,12 +13,6 @@
   padding-left: 1em;
 }
 
-#rsvpName {
-  width: 80vw;
-  text-align: center;
-  margin-top: 0.5em;
-}
-
 .rsvpPage .hidden {
   display: none;
 }
@@ -85,3 +79,8 @@
   color: #555
 }
 
+.rsvpPage input[type=text] {
+  width: 80vw;
+  text-align: center;
+  margin-top: 0.5em;
+}

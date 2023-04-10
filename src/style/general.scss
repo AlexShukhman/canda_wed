@@ -50,7 +50,6 @@ button:active {
 }
 
 input {
-  width: auto;
   text-align: right;
   vertical-align: middle;
 }
@@ -60,8 +59,11 @@ input[type=checkbox] {
 }
 
 input[type=text] {
+  width: auto;
   font-size: 80%;
   text-align: left;
   border-width: 2px;
   padding: 4px;
+  border: 1px solid #999;
+  padding: 0.5rem;
 }
