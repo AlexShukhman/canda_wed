@@ -238,7 +238,7 @@ export function RSVPPage () {
                   ...workingUser,
                   dietaryRestrictions: e.target.value,
                 })
-              }} placeholder={`${(workingUser.partnerName || workingUser.plusOneName || 'Chris').split(' ')[0]} is vegan and I only drink clear soup.`} /></td></tr><tr></tr>
+              }} placeholder={`${workingUser.partnerName || workingUser.plusOneAllowed ? `${(workingUser.partnerName || workingUser.plusOneName || 'Chris').split(' ')[0]} is vegan and ` : ''}I only drink clear soup.`} /></td></tr><tr></tr>
               
               {/* Song Request */}
               {/* <tr>
