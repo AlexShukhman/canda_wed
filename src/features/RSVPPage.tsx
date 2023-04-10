@@ -171,7 +171,7 @@ export function RSVPPage () {
     <div>
       {/* <ol>{invitedPeople.filter(person => person.rsvped).map(person => {
         return [
-          <li>{person.name}: {person.dietaryRestrictions ? "no diet" : person.dietaryRestrictions}</li>,
+          <li>{person.name}: {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>,
           ...person.plusOneAdded ? [
             <li>{person.name} +1</li>
           ] : []
