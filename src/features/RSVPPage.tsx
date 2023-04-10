@@ -81,37 +81,6 @@ async function readInvited ():Promise<[Person[], string[]]> {
   return [invitedPeople, primaryInvitedNames];
 }
 
-async function updateList () {
-  const keyElement = document.getElementById('key') as HTMLInputElement;
-  const key = keyElement.value;
-  const listElement = document.getElementById('list') as HTMLInputElement;
-  const list = JSON.parse(listElement.value || '');
-
-  console.log('key', key);
-  console.log('list', list);
-
-  const inviteListURL = "https://us-central1-candawedding-3f172.cloudfunctions.net/widgets/setUsers";
-
-  try {
-    const response = await fetch(inviteListURL, {
-      method: "POST",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-      referrerPolicy: "no-referrer",
-      body: JSON.stringify({key, users: list}),
-    });
-
-    console.log(response);
-  } catch (e) {
-    console.log(e);
-  }
-}
-
 export function RSVPPage () {
   const [invitedPeople, setInvitedPeople] = useState<Person[]>([]);
   const [primaryIdHolders, setPrimaryIdHolders] = useState<string[]>([])
@@ -136,6 +105,7 @@ export function RSVPPage () {
     async function getUsers() {
       const [foundInvitedPeople, foundPrimaryIdHolders] = await readInvited();
       setInvitedPeople(foundInvitedPeople);
+
       setPrimaryIdHolders(foundPrimaryIdHolders);
     }
 
@@ -163,19 +133,6 @@ export function RSVPPage () {
     setShowRSVPContent(false);
     setShowWarning(false);
   }
-
-  // const [workingUser, setWorkingUser] = useState<Person>({
-  //   id: "",
-  //   plusOneAllowed: false,
-  //   name: "",
-  //   plusOneName: "",
-  //   plusOneAdded: false,
-  //   partnerName: "",
-  //   rsvped: false,
-  //   partnerComing: false,
-  //   dietaryRestrictions: "",
-  //   songRequest: "",
-  // });
 
   async function submitRSVP() {
     let userToSubmit:Person = {...workingUser};
@@ -212,11 +169,16 @@ export function RSVPPage () {
 
   return (
     <div>
-      {/* <input type="text" id='key' defaultValue='key'/>
-      <input type="text" id='list' defaultValue='list'/>
-      <button onClick={updateList}>Update List</button> */}
+      {/* <ol>{invitedPeople.filter(person => person.rsvped).map(person => {
+        return [
+          <li>{person.name}: {person.dietaryRestrictions ? "no diet" : person.dietaryRestrictions}</li>,
+          ...person.plusOneAdded ? [
+            <li>{person.name} +1</li>
+          ] : []
+        ]
+      }).reduce((acc,el) => [...acc, ...el], [])}</ol> */}
       <div className='rsvpPage'>
-        <img src={img2} alt="scroll down please!"/>
+        <img src={img2} alt="RSVP please!"/>
         <h1>RSVP</h1>
         <Autocomplete updateListener={hideRSVPContent} defaultContent="Your Name" id="rsvpName" suggestions={invitedPeople.map(person => person.name)}/>
         <button onClick={showRSVPContent}>Update RSVP</button>

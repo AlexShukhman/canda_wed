@@ -13,3 +13,12 @@ h1 {
   font-style: italic;
   font-size: 300%;
 }
+
+hr {
+  margin: 3em 0;
+  border: 1px solid grey;
+  border-radius: 1em;
+  background-color: gray;
+  border-width: 1px;
+  width: 80vw;
+}

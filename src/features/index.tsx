@@ -1,3 +1,3 @@
 export {HeroPage} from "./HeroPage";
-export {WherePage} from "./WherePage";
+export {WhereWhenPage} from "./WhereWhenPage";
 export {RSVPPage} from "./RSVPPage";
