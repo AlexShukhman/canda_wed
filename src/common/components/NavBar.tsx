@@ -18,9 +18,9 @@ export function NavBar () {
       <ul className="menu" onClick={unToggle}>
         <li><Link to='/'><LinkButton>Home</LinkButton></Link></li>
         <li><Link to='/where_when'><LinkButton >Where/When</LinkButton></Link></li>
-        <li>Details</li>
+        <li><Link to='/details'><LinkButton >FAQ</LinkButton></Link></li>
         <li><Link to='/rsvp'><LinkButton >RSVP</LinkButton></Link></li>
-        <li>Registry</li>
+        <li><Link to='/'><LinkButton >Registry</LinkButton></Link></li>
       </ul>
     </section>
   )

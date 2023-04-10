@@ -4,6 +4,7 @@ import {
   HeroPage,
   WhereWhenPage,
   RSVPPage,
+  DetailsPage
 } from "features";
 
 export const ManageRoutes = () => {
@@ -12,6 +13,7 @@ export const ManageRoutes = () => {
             <Route index element={<HeroPage/>}/>
             <Route path='/where_when' element={<WhereWhenPage/>}/>
             <Route path='/rsvp' element={<RSVPPage/>}/>
+            <Route path='/details' element={<DetailsPage/>}/>
         </Routes>
     );
 }
