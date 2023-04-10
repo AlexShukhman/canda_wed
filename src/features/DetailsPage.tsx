@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { useState } from 'react';
 import img4 from 'assets/png/img4.png';
 import img5 from 'assets/png/img5.png';
@@ -13,7 +14,7 @@ export function DetailsPage () {
       try {
         const messageMeURL = "https://us-central1-candawedding-3f172.cloudfunctions.net/widgets/message";
 
-        const response = await fetch(messageMeURL, {
+        await fetch(messageMeURL, {
           method: "POST",
           mode: "cors",
           cache: "no-cache",
@@ -26,7 +27,7 @@ export function DetailsPage () {
           body: JSON.stringify({message}),
         });
     
-        console.log(response);
+        console.log('Success');
       } catch (e) {
         console.log(e);
       }

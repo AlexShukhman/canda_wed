@@ -24,8 +24,6 @@ async function readInvited ():Promise<[Person[], string[]]> {
   const response = await fetch(inviteListURL);
   const inviteList = await response.json();
 
-  console.log(JSON.stringify(inviteList));
-
   const invitedPeople:Person[] = [];
   const primaryInvitedNames:string[] = [];
 
@@ -146,7 +144,7 @@ export function RSVPPage () {
     const rsvpUrl = "https://us-central1-candawedding-3f172.cloudfunctions.net/widgets/rsvp";
 
     try {
-      const response = await fetch(rsvpUrl, {
+      await fetch(rsvpUrl, {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
@@ -159,7 +157,7 @@ export function RSVPPage () {
         body: JSON.stringify(userToSubmit),
       });
   
-      console.log(response);
+      console.log('Success');
     } catch (e) {
       console.log(e);
     }
