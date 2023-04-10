@@ -66,7 +66,7 @@ export function DetailsPage () {
         <img src={img4} alt="she... actually did the hamster ball..."/>
         <h2>How can I send my well wishes, cooking tips, random facts, and general inquiries?</h2>
         <p>Shoot us a message here (we'll check these periodically, we promise!):</p>
-        <textarea rows={5} cols={40} name="text" placeholder="Enter text" value={message} onChange={(e)=>{
+        <textarea rows={5} name="text" placeholder="Enter scribbles..." value={message} onChange={(e)=>{
           setMessage(e.target.value);
           setChanged(true);
         }}></textarea> <button onClick={sendMessage}>Submit</button>
