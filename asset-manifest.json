@@ -1,8 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5d1a918.css",
-    "main.js": "/static/js/main.17361f41.js",
+    "main.css": "/static/css/main.3a68995e.css",
+    "main.js": "/static/js/main.e940dd3f.js",
+    "static/media/bbg_cropped.png": "/static/media/bbg_cropped.6974379c87fbccf3dc1e.png",
+    "static/media/bpl_cropped.png": "/static/media/bpl_cropped.4f260b752e6f7f0d1fdd.png",
+    "static/media/clara_artie.png": "/static/media/clara_artie.cb35f8d3d5a03e8ea128.png",
+    "static/media/teatown_cropped.png": "/static/media/teatown_cropped.db82e177d3b8a0dc31fa.png",
     "static/media/photo1.jpeg": "/static/media/photo1.d0fa6440b11ca69bf0ea.jpeg",
+    "static/media/img6.png": "/static/media/img6.f42e09dfc1201913e675.png",
     "static/media/img5.png": "/static/media/img5.e450cc161326a75687eb.png",
     "static/media/img4.png": "/static/media/img4.c09d0f36483a28b71738.png",
     "static/media/img1.png": "/static/media/img1.1b9483922354de1f2076.png",
@@ -10,11 +15,11 @@
     "static/media/img2.png": "/static/media/img2.e37b3038a6813c8aa718.png",
     "service-worker.js": "/service-worker.js",
     "index.html": "/index.html",
-    "main.b5d1a918.css.map": "/static/css/main.b5d1a918.css.map",
-    "main.17361f41.js.map": "/static/js/main.17361f41.js.map"
+    "main.3a68995e.css.map": "/static/css/main.3a68995e.css.map",
+    "main.e940dd3f.js.map": "/static/js/main.e940dd3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5d1a918.css",
-    "static/js/main.17361f41.js"
+    "static/css/main.3a68995e.css",
+    "static/js/main.e940dd3f.js"
   ]
 }
