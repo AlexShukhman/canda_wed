@@ -1,0 +1,81 @@
+.registryPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.registryPage h1 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.registryPage p {
+  padding: 0 10vmin;
+}
+
+.registryLine {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.registryItem {
+  width: calc(50% - 6vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registryItem:nth-child(2n) {
+  padding-right: 4vw;
+  padding-left: 2vw
+}
+
+.registryItem:nth-child(2n+1) {
+  padding-left: 4vw;
+  padding-right: 2vw;
+}
+
+.registryItem h2 {
+  font-size: 100%;
+}
+
+.registryItem p {
+  font-size: smaller;
+  padding: 0;
+}
+
+.registryItem img {
+  height: 100%;
+  object-fit: contain;
+}
+
+// Mobile
+@media (max-width: 700px) {
+  .registryPage {
+    font-size: calc(10px + 1vmin);
+  }
+
+  .registryItem {
+    width: calc(50% - 3vw);
+  }
+
+  .registryItem:nth-child(2n) {
+    padding-right: 2vw;
+    padding-left: 1vw
+  }
+  
+  .registryItem:nth-child(2n+1) {
+    padding-left: 2vw;
+    padding-right: 1vw;
+  }
+
+  .registryLine {
+    height: 35vh;
+  }
+}
