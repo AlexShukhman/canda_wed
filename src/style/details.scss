@@ -12,6 +12,11 @@
   padding-bottom: 1em;
 }
 
+.faq h2,
+.faq h3 {
+  margin-top: calc(5vh + 1em);
+}
+
 .faq hr {
   margin: 1em 0;
 }
@@ -28,6 +33,49 @@
   height: 30vmin;
 }
 
-.faq > textarea {
+.faq>textarea {
   width: 100%;
+}
+
+.submitArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.submitArea input {
+  margin-right: 0.5em;
+  margin-top: -0.25em;
+  margin-bottom: auto;
+}
+
+.submitArea label {
+  margin-top: 0.25em;
+  margin-bottom: auto;
+  font-size: 60%;
+  color: #555;
+}
+
+.submitArea label:hover {
+  color: black;
+}
+
+.message {
+  font-size: 50%;
+  text-align: left;
+  padding-right: 45%;
+  padding-left: 10%;
+}
+
+.response {
+  font-size: 50%;
+  text-align: right;
+  color: gray;
+  padding-left: 45%;
+  padding-right: 10%;
+}
+
+.message::before,
+.message::after {
+  content: '"';
 }

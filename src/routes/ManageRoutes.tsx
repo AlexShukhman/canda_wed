@@ -4,7 +4,8 @@ import {
   HeroPage,
   WhereWhenPage,
   RSVPPage,
-  DetailsPage
+  DetailsPage,
+  RegistryPage,
 } from "features";
 
 export const ManageRoutes = () => {
@@ -14,6 +15,7 @@ export const ManageRoutes = () => {
             <Route path='/where_when' element={<WhereWhenPage/>}/>
             <Route path='/rsvp' element={<RSVPPage/>}/>
             <Route path='/details' element={<DetailsPage/>}/>
+            <Route path='/registry' element={<RegistryPage/>}/>
         </Routes>
     );
 }

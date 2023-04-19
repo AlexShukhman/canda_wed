@@ -171,7 +171,7 @@ export function RSVPPage () {
         return [
           <li>{person.name}: {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>,
           ...person.plusOneAdded ? [
-            <li>{person.name} +1</li>
+            <li>{person.name} +1: {person.plusOneName}</li>
           ] : []
         ]
       }).reduce((acc,el) => [...acc, ...el], [])}</ol> */}

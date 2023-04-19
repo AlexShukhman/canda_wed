@@ -20,7 +20,7 @@ export function NavBar () {
         <li><Link to='/where_when'><LinkButton >Where/When</LinkButton></Link></li>
         <li><Link to='/details'><LinkButton >FAQ</LinkButton></Link></li>
         <li><Link to='/rsvp'><LinkButton >RSVP</LinkButton></Link></li>
-        <li><Link to='/'><LinkButton >Registry</LinkButton></Link></li>
+        <li><Link to='/registry'><LinkButton >Registry</LinkButton></Link></li>
       </ul>
     </section>
   )

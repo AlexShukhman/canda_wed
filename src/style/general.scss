@@ -8,6 +8,16 @@ body {
   overflow-wrap: break-word;
 }
 
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(33, 101, 169);
+  text-decoration: underline;
+}
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -22,6 +32,17 @@ h2 {
   font-weight: bold;
   padding-bottom: 0.25em;
   padding-top: 1em;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  font-weight: bold;
+  padding-bottom: 0.25em;
+  padding-top: 1em;
+  text-decoration: underline;
 }
 
 hr {
