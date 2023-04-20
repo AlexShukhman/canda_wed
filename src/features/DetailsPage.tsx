@@ -106,7 +106,7 @@ export function DetailsPage () {
             <h3>Previous Messages</h3>
             <div id="messages">{
             currentMessages
-              .filter(message => !message.private)
+              // .filter(message => !message.private)
               .map(message => <div className="messageContainer">
                 <p className="message">{message.message}</p>
                 {message.response

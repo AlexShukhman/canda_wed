@@ -167,14 +167,23 @@ export function RSVPPage () {
 
   return (
     <div>
-      {/* <ol>{invitedPeople.filter(person => person.rsvped).map(person => {
-        return [
-          <li>{person.name}: {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>,
-          ...person.plusOneAdded ? [
-            <li>{person.name} +1: {person.plusOneName}</li>
-          ] : []
-        ]
-      }).reduce((acc,el) => [...acc, ...el], [])}</ol> */}
+      <ol>{[
+        ...invitedPeople.filter(person => person.rsvped).map(person => {
+          return [
+            <li>{person.name}: {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>,
+            ...person.plusOneAdded ? [
+              <li>{person.name} +1: {person.plusOneName}</li>
+            ] : []
+          ]
+        }).reduce((acc,el) => [...acc, ...el], []),
+        <p>-</p>,
+      ...invitedPeople.filter(person => !person.rsvped).map(person => {
+        return <li>{person.name}: Not RSVPed</li>
+      }),
+      ...invitedPeople.filter(person => person.plusOneAllowed && !person.plusOneAdded).map(person => {
+        return <li>{person.name} +1: Not RSVPed</li>
+      }),
+      ]}</ol>
       <div className='rsvpPage'>
         <img src={img2} alt="RSVP please!"/>
         <h1>RSVP</h1>
