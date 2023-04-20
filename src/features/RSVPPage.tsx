@@ -167,12 +167,12 @@ export function RSVPPage () {
 
   return (
     <div>
-      <ol>{[
+      <ol className="private">{[
         ...invitedPeople.filter(person => person.rsvped).map(person => {
           return [
             <li>{person.name}: {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>,
             ...person.plusOneAdded ? [
-              <li>{person.name} +1: {person.plusOneName}</li>
+              <li>{person.plusOneName} ({person.name.split(' ')[0]}'s +1): {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>
             ] : []
           ]
         }).reduce((acc,el) => [...acc, ...el], []),
@@ -181,7 +181,7 @@ export function RSVPPage () {
         return <li>{person.name}: Not RSVPed</li>
       }),
       ...invitedPeople.filter(person => person.plusOneAllowed && !person.plusOneAdded).map(person => {
-        return <li>{person.name} +1: Not RSVPed</li>
+        return <li>{person.name.split(' ')[0]}'s +1: Not RSVPed</li>
       }),
       ]}</ol>
       <div className='rsvpPage'>
