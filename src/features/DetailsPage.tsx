@@ -104,16 +104,24 @@ export function DetailsPage () {
         {currentMessages.filter(message => !message.private).length 
           ?<div>
             <h3>Previous Messages</h3>
-            <div id="messages">{
-            currentMessages
-              // .filter(message => !message.private)
-              .map(message => <div className="messageContainer">
-                <p className="message">{message.message}</p>
-                {message.response
-                  ? <p className="response">{message.response}</p>
-                  : null}
-              </div>)
-            }</div>
+            <div id="messages">{[
+              ...currentMessages
+                .filter(message => !message.private)
+                .map(message => <div className="messageContainer">
+                  <p className="message">{message.message}</p>
+                  {message.response
+                    ? <p className="response">{message.response}</p>
+                    : null}
+                </div>),
+              ...currentMessages
+                .filter(message => message.private)
+                .map(message => <div className="messageContainer">
+                  <p className="message private">{message.message}</p>
+                  {message.response
+                    ? <p className="response">{message.response}</p>
+                    : null}
+                </div>),
+            ]}</div>
           </div>
           : null
         }
