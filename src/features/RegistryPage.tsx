@@ -8,7 +8,7 @@ export function RegistryPage () {
   return (
     <div className='registryPage'>
       <h1>Registry-ish</h1>
-      <p>As was mentioned in the <a href="/#/details">FAQ</a>, we are asking that guests refrain from buying us (or the kittens...) any gifts. Instead we'd prefer that you give what you're comfortable giving to one or more of these non-profit organizations that are near and dear to us as a couple.<br/><br/>Should you like to send us a note or question about your donation, we have a field on the <a href="/#/details">FAQ page</a> where you can do so!<br/><br/><i>Just click the organization's name to open its donation site.</i></p> 
+      <p>As we mentioned in the <a href="/#/details">FAQ</a>, we are asking that guests refrain from buying us (or the kittens...) any gifts. Instead, we'd prefer that you give what you're comfortable giving to one or more of these non-profit organizations that are near and dear to us as a couple.<br/><br/>Should you like to send us a note or question about your donation, we have a field on the <a href="/#/details">FAQ page</a> where you can do so!<br/><br/><i>Just click the organization's name to open its donation site.</i></p> 
       <hr />
       <div className="registryLine">
         <div className="registryItem">
@@ -32,7 +32,7 @@ export function RegistryPage () {
       <hr />
       <div className="registryLine">
         <div className="registryItem">
-          <h2><a target="_blank" rel="noopener noreferrer" href="https://www.weareplannedparenthood.org/onlineactions/cOJVhOyrzkq4uBcxVekXFA2?sourceid=1000061&affiliateID=091110&_gl=1*rzhr2h*_ga*MTA1MjMwODU4My4xNjgwNjU0NDUz*_gid*MTQzMDUxNDgyNi4xNjgwODc1MTM0">Planned Parenthood Brooklyn</a></h2>
+          <h2><a target="_blank" rel="noopener noreferrer" href="https://www.weareplannedparenthood.org/onlineactions/cOJVhOyrzkq4uBcxVekXFA2?sourceid=1000061&affiliateID=091110&_gl=1*rzhr2h*_ga*MTA1MjMwODU4My4xNjgwNjU0NDUz*_gid*MTQzMDUxNDgyNi4xNjgwODc1MTM0">Planned Parenthood of New York</a></h2>
           <p>In today's world, this one speaks for itself, unfortunately.</p>
         </div>
         <div className="registryItem">
@@ -46,7 +46,7 @@ export function RegistryPage () {
         </div>
         <div className="registryItem">
           <h2><a target="_blank" rel="noopener noreferrer" href="https://donate.bklynlibrary.org/give/387995#!/donation/checkout">The Brooklyn Public Library</a></h2>
-          <p>Because free access to books and information is one of the most important things in the world.</p>
+          <p><i>"Think before you speak.<br/>Read before you think."</i><br/>~ Fran Lebowitz</p>
         </div>
       </div>
       <hr />

@@ -76,13 +76,13 @@ export function DetailsPage () {
         <h2>When do you need to know if I'm coming?</h2>
         <p>Ideally, as soon as you can, but definitely by <b>no later than September 1<sup>st</sup></b>.</p>
         <h2>How do I get there?</h2>
-        <p><i>For those of you with cars:</i> Drive. We'll have our own parking lot at Teatown, so you don't have to worry about that.<br/><br/><i>For those of you without cars:</i> Take the Hudson Line on Metro North (from Grand Central) to <b>Croton-Harmon</b> (not Ossining) and get a cab or carshare to Teatown. It's about a 10-minute ride.</p>
+        <p><i>For those of you with cars:</i> Drive. We'll have our own parking lot at Teatown, so you don't have to worry about that.<br/><br/><i>For those of you without cars:</i> Take the Hudson Line on Metro-North Railroad (from Grand Central) to <b>Croton-Harmon</b> (not Ossining) and get a cab or carshare to Teatown. It's about a 10-minute ride.</p>
         <h2>What should I wear?</h2>
         <p>Look nice, but don't go crazy. For context, Alex will be wearing a suit - not a tux - and Cecilia will be wearing flats. Plus, it's at a nature preserve, so dress accordingly.</p>
         <h2>Do I get a plus-one?</h2>
         <p>We tried really, really hard to keep things small (under 60 people). If you go to the <a href="/#/rsvp">RSVP page</a> and type in your name, it will specify if you get a plus-one. Let us know if you have any questions or concerns.</p>
         <h2>These drawings are cute, but what do you actually look like?</h2>
-        <p>Why thank you! Alex worked for about 2 minutes apiece on them! Here's a photo so you don't miss us at the party. (Photo credit goes to Dante!)</p>
+        <p>Why, thank you! Alex worked for about two minutes apiece on them! Here's a photo so you don't miss us at the party. (Photo credit goes to Dante!)</p>
         <img src={photo} alt="Trust us, this one's a cute-ass photo" />
         <h2>What should I give you guys?</h2>
         <p>Because we have plenty of stuff, we ask that in lieu of gifts, you give whatever you can to one (or more!) of a list of organizations that we care a lot about. See the <a href="/#/registry">registry page</a> for details, links, and cat pictures.</p>
@@ -96,7 +96,7 @@ export function DetailsPage () {
         <p>We're living in a very weird time, but the same rules apply now as have for a while: if you're feeling sick or have reason to think you might have COVID, please don't come. We'll still love you and will be extremely grateful to you for not potentially getting a bunch of other people sick. In the weeks leading up the wedding, Cecilia - at least - anticipates going around in a giant protective hamster ball. (Kidding...kind of.)</p>
         <img src={img4} alt="she... actually did the hamster ball..."/>
         <h2>How can I send my well wishes, cooking tips, random facts, and general inquiries?</h2>
-        <p>Shoot us a message here:<br/>(we'll check the private ones eventually, we promise!)</p>
+        <p>Shoot us a message below.<br/>(We'll check the private ones eventually, we promise!)</p>
         <textarea rows={5} name="text" placeholder="Enter scribbles..." value={message} onChange={(e)=>{
           setMessage(e.target.value);
           setChanged(true);

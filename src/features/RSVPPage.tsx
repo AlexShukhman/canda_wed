@@ -16,6 +16,7 @@ type Person = {
 
   dietaryRestrictions: string,
   songRequest: string,
+  responded: boolean,
 };
 
 async function readInvited ():Promise<[Person[], string[]]> {
@@ -38,6 +39,7 @@ async function readInvited ():Promise<[Person[], string[]]> {
     partnerComing = false,
     dietaryRestrictions = "",
     songRequest = "",
+    responded = false,
   } : Person) => {
     primaryInvitedNames.push(name);
     invitedPeople.push({
@@ -55,6 +57,7 @@ async function readInvited ():Promise<[Person[], string[]]> {
 
       dietaryRestrictions,
       songRequest,
+      responded,
     });
 
     if (partnerName) {
@@ -72,6 +75,7 @@ async function readInvited ():Promise<[Person[], string[]]> {
 
         dietaryRestrictions,
         songRequest,
+        responded,
       });
     }
   });
@@ -97,6 +101,7 @@ export function RSVPPage () {
     partnerComing: false,
     dietaryRestrictions: "",
     songRequest: "",
+    responded: false,
   });
 
   useEffect(() => {
@@ -133,7 +138,7 @@ export function RSVPPage () {
   }
 
   async function submitRSVP() {
-    let userToSubmit:Person = {...workingUser};
+    let userToSubmit:Person = {...workingUser, responded: true};
     if (!primaryIdHolders.includes(workingUser.name)) {
       userToSubmit.name = workingUser.partnerName;
       userToSubmit.partnerName = workingUser.name;
@@ -168,6 +173,7 @@ export function RSVPPage () {
   return (
     <div>
       <ol className="private">{[
+        <p><i>COMING:</i></p>,
         ...invitedPeople.filter(person => person.rsvped).map(person => {
           return [
             <li>{person.name}: {person.dietaryRestrictions ? person.dietaryRestrictions :  "no dietary restrictions"}</li>,
@@ -177,12 +183,28 @@ export function RSVPPage () {
           ]
         }).reduce((acc,el) => [...acc, ...el], []),
         <p>-</p>,
-      ...invitedPeople.filter(person => !person.rsvped).map(person => {
-        return <li>{person.name}: Not RSVPed</li>
-      }),
-      ...invitedPeople.filter(person => person.plusOneAllowed && !person.plusOneAdded).map(person => {
-        return <li>{person.name.split(' ')[0]}'s +1: Not RSVPed</li>
-      }),
+        <p><i>NOT COMING:</i></p>,
+        ...invitedPeople.filter(person => person.responded && !person.rsvped).map(person => {
+          return [
+            <li>{person.name}: Not Coming</li>,
+            ...person.plusOneAllowed ? [
+              <li>{person.name.split(' ')[0]}'s +1: Not Coming</li>
+            ] : []
+          ]
+        }),
+        ...invitedPeople.filter(person => person.responded && person.rsvped && person.plusOneAllowed && !person.plusOneAdded).map(person => {
+          return <li>{person.name.split(' ')[0]}'s +1: Not Coming</li>
+        }),
+        <p>-</p>,
+        <p><i>NOT RESPONDED:</i></p>,
+        ...invitedPeople.filter(person => !person.responded && !person.rsvped).map(person => {
+          return [
+            <li>{person.name}: Not Responded</li>,
+            ...person.plusOneAllowed ? [
+              <li>{person.name}'s +1: Not Responded</li>
+            ] : [],
+          ]
+        }).reduce((acc, el) => [...acc, ...el], []),
       ]}</ol>
       <div className='rsvpPage'>
         <img src={img2} alt="RSVP please!"/>
@@ -191,7 +213,7 @@ export function RSVPPage () {
         <button onClick={showRSVPContent}>Update RSVP</button>
         <div className={toShowRSVPContent ? 'rsvpContent' : 'hidden'}>
           <div className={toShowWarning ? 'warning' : 'hidden'}>{warning}</div>
-          <p>Hello {workingUser.name.split(' ')[0]}, we're glad to hear from you. Please update the below information as needed.</p>
+          <p>Hello {workingUser.name.split(' ')[0]}, we're glad to hear from you. Please update the information below as needed.</p>
           <table className="rsvpForm table-light">
             {/* Are they coming */}
             <tr><td colSpan={2}><p>First things first: are you coming?</p></td></tr>
@@ -208,7 +230,7 @@ export function RSVPPage () {
             <tr>
               <td colSpan={2}><p>{workingUser.plusOneAllowed
                 ? "We made room for a plus-one for you. Will you be bringing one?"
-                : workingUser.partnerName ? `Will ${workingUser.partnerName.split(' ')[0]} be joining you?` : "Unfortunately due to limited space, we couldn't offer you a plus-one, sorry for the inconvenience."}</p></td>
+                : workingUser.partnerName ? `Will ${workingUser.partnerName.split(' ')[0]} be joining you?` : "Unfortunately, due to limited space, we couldn't offer you a plus-one, sorry for the inconvenience."}</p></td>
             </tr>
             {workingUser.partnerName
               ? <tr>
@@ -247,7 +269,7 @@ export function RSVPPage () {
                   ...workingUser,
                   dietaryRestrictions: e.target.value,
                 })
-              }} placeholder={`${workingUser.partnerName || workingUser.plusOneAllowed ? `${(workingUser.partnerName || workingUser.plusOneName || 'Chris').split(' ')[0]} is vegan and ` : ''}I only drink clear soup.`} /></td></tr><tr></tr>
+              }} placeholder={`Ex: ${workingUser.partnerName || workingUser.plusOneAllowed ? `${(workingUser.partnerName || workingUser.plusOneName || 'Chris').split(' ')[0]} is vegan and ` : ''}I only drink clear soup.`} /></td></tr><tr></tr>
               
               {/* Song Request */}
               {/* <tr>
